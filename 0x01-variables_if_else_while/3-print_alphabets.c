@@ -1,5 +1,5 @@
 /**
- * main - Entry
+ * main - jump
  *
  * Return: around
  */
@@ -10,7 +10,7 @@ int main(void)
 {
 	char c;
 	char C;
-
+i
 	for (c = 'a'; c <= 'z'; c++)
 	{
 	putchar(c);
