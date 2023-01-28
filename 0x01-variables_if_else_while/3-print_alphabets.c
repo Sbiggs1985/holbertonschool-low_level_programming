@@ -1,5 +1,5 @@
 /**
- * main - jump
+ * main - Entry
  *
  * Return: around
  */
