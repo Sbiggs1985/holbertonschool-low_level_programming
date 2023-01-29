@@ -15,7 +15,7 @@ i
 	{
 	putchar(c);
 	}
-	for (C = 'A'; C <= 'Z'; c++)
+	for (C = 'A'; C <= 'Z'; C++)
 	{
 	putchar(C);
 	}
