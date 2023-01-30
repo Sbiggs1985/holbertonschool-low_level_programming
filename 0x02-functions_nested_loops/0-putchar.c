@@ -6,14 +6,9 @@
 
 #include "main.h"
 
-int main(void)
+	int main(void)
 {
-	char ch;
+	printf("_putchar\n");
 
-	for (ch = 'A' ; ch <= 'Z' ; ch++)
-	{
-
-	putchar(ch);
-}
-	return (0);
+	Return 0;
 }
