@@ -6,9 +6,16 @@
 
 #include "main.h"
 
-	int main(void)
+int main(void)
 {
-	printf("_putchar\n");
+	char j[] = "_putchar";
 
-	Return 0;
+	int i;
+
+	for (i = 0; j[i]; i++)
+	{
+	_putchar(j[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
