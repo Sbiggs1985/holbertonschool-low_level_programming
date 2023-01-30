@@ -8,4 +8,9 @@
 
 int main(void)
 {
-	
+	char _putchar = 'i';
+
+	putchar(i);
+
+	return (0);
+}
