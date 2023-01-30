@@ -4,8 +4,6 @@
 * Return: Always 0
 */
 
-#include "main.h"
-
 void print_alphabet_x10(void);
 {
 	char c;
@@ -21,5 +19,4 @@ void print_alphabet_x10(void);
 	}
 	_putchar('\n');
 	i++;
-	return (0);
 }
