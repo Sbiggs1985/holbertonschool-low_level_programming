@@ -1,13 +1,12 @@
 /**
-* main - Entry
-* Return: im dieing LOL
-*
+ * print_alphabet - followed by a new line
+ *
+ * Return: always 0
 */
 
 #include "main.h"
 
 void print_alphabet(void)
-int main(void)
 {
 	char a = 'a';
 
