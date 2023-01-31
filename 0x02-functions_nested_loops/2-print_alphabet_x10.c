@@ -4,19 +4,21 @@
 * Return: Always 0
 */
 
-void print_alphabet_x10(void);
+#include "main.h"
+
+void print_alphabet_x10(void)
 {
-	char c;
-	int i = 0;
+	char a = 'a';
+	int i;
 
-	while (i <= 9)
+	for (i = 0; i < 10; i++)
 	{
-
-	for (c = 'a'; c <= 'z'; c++)
-
+	while (a <= 'z')
 	{
-	_putchar(c);
+	_putchar(a);
+	a++;
 	}
+	a = 'a';
 	_putchar('\n');
-	i++;
+	}
 }

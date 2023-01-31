@@ -7,6 +7,7 @@
 #include "main.h"
 
 void print_alphabet(void)
+int main(void)
 {
 	char a = 'a';
 
@@ -16,4 +17,5 @@ void print_alphabet(void)
 		a++;
 	}
 	_putchar('\n');
+	return (0);
 }
