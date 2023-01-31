@@ -1,7 +1,7 @@
 /**
-* Print the alphabet 10 times
-*
-* Return: Count to 10
+ * Print the alphabet ten times in C
+ *
+ * Return: The alphabet
 */
 
 #include "main.h"
