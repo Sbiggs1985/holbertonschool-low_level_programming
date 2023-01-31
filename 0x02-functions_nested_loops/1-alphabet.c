@@ -6,7 +6,7 @@
 
 #include "main.h"
 
-void print_alphabet(void)
+void print_alphabet(void);
 {
 	char a = 'a';
 
@@ -16,5 +16,4 @@ void print_alphabet(void)
 		a++;
 	}
 	_putchar('\n');
-	return (0);
 }
