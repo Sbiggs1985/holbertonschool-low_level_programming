@@ -1,9 +1,9 @@
 #include "main.h"
- /**
- * _isdigit - Return 1 if c is uppercase
- * @c: we have declared the char c
- * Return: 1 or 0
- */
+/**
+* _isdigit - Return 1 if c is uppercase
+* @c: we have declared the char c
+* Return: 1 or 0
+*/
 
 int _isdigit(int c)
 {
