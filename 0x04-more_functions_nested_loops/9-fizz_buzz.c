@@ -1,7 +1,7 @@
 /**
- * main entry - The fixx buzz
- * *Return: nothing
- */
+* main - The fixx buzz
+* Return: nothing
+*/
 #include <stdio.h>
 
 int main(void)
@@ -30,5 +30,4 @@ int main(void)
 		}
 		printf("Buzz");
 		printf("\n");
-			return (0);
 }
