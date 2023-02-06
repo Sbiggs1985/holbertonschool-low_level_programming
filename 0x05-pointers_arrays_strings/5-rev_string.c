@@ -5,17 +5,18 @@
  */
 void rev_string(char *s)
 {
-	int len = 0;
-	int index = 0;
-	char tmp;
+	int revcount = 0;
+	int x;
+	char inputstring = s[0];
 
-	while (s[index++])
-		len++;
-
-	for (index = len - 1; index >= len / 2; index--)
+	while (s[revcount] != '\0')
 	{
-	tmp = s[index];
-	s[index] = s[len - s[len - index - 1];
-	s[len - index - 1] = tmp;
+		revcount++;
 	}
-}
+	for (x = 0; x < revcount; x++)
+	{
+		revcount--;
+		inputstring = s[x];
+		s[x] = s[revcount];
+		s[revcount] = inputstring;
+	}
