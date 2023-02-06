@@ -1,7 +1,7 @@
-#ifndef "MAIN_H"
-#define "MAIN_H"
+#ifndef HEADER_H
+#define HEADER_H
 
-#include <stadio.h>
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 void reset_to_98(int *n);
@@ -14,4 +14,5 @@ void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
+int _putchar(char c);
 #endif
