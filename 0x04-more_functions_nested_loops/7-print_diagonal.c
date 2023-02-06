@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* Main - drawing a diagonal line
+* print_diagonal - drawing a diagonal line
 * @n: Using n to create a diaginal line
 * Return: always 0
 */
