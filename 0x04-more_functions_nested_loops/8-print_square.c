@@ -3,6 +3,7 @@
  * @size: use to print a square
  * Return: Always 0
  */
+#include "main.h"
 void print_square(int size);
 {
 	char square = '#';
