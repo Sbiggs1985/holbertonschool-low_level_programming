@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * reset_to_98 - Entry point
-* @n: - Integer pointer
+* @n: Integer pointer
 * Return: Always 0
 */
 
