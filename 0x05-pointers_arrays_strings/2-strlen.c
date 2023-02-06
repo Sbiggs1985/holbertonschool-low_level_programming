@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int_strlen - Entry Point
+ * _strlen - Entry Point
  * @s: get string
  * Return: length
  */
