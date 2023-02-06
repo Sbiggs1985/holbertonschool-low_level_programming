@@ -2,17 +2,30 @@
 /**
 * Main - drawing a diagonal line
 * @n: Using n to create a diaginal line
-* Return: Nothing
+* Return: always 0
 */
+
+#include "main.h"
 void print_diagonal(int n)
 {
-	if (n <= 0)
+	char line = '\\';
+	int b = 0;
+	int c = 0;
+
+	if (n > 0)
+	{
+		for (; b < n; b++)
+		{
+			for (c = 0; c < b; c++)
+			{
+				_putchar(' ');
+			}
+			_putchar(line);
+			_putchar('\n');
+		}
+	}
+	else
 	{
 	_putchar('\n');
 	}
-	if (n >= 10)
-		_putchar('\\');
-		_putchar('\n');
-	}
 }
-

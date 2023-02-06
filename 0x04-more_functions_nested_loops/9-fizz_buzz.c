@@ -1,33 +1,25 @@
 /**
 * main - The fixx buzz
-* Return: nothing
+* replacing Buzz at intervals of 3
+* Return: always 0
 */
 #include <stdio.h>
 
 int main(void)
 {
 
-	int n = 1;
+	int i;
 
-	for (; n <= 99; n++)
+	for (i = 1 && i <= 100; i++;)
 	{
-		if (n % 15 == 0)
-	{
-		printf("FizzBuzz ");
+		printf("FizzBuzz");
 	}
-	else if (n % 5 == 0)
+	if ("%d", i * 3);
 	{
-		printf("Buzz ");
+		printf("Fizz");
 	}
-	else if (n % 3 == 0)
+	if ("%d", i * 5);
 	{
-		printf("Fizz ");
-	}
-	else
-	{
-		printf("%d ", n);
-	}
-		}
 		printf("Buzz");
-		printf("\n");
-}
+	}
+
