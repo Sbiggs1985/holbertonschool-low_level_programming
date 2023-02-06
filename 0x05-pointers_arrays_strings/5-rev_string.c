@@ -2,12 +2,13 @@
 /**
  * rev_string - Entry Point
  * @s: Reversing a string
+ * Return: string and more
  */
 void rev_string(char *s)
 {
 	int revcount = 0;
 	int x;
-	char inputstring = s[0];
+	char inputstring;
 
 	while (s[revcount] != '\0')
 	{
@@ -20,3 +21,4 @@ void rev_string(char *s)
 		s[x] = s[revcount];
 		s[revcount] = inputstring;
 	}
+}
