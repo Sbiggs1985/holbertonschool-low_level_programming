@@ -3,7 +3,7 @@ i#include "main.h"
  * print_rv - Prints a string
  * @s: Pointer to a string
  */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int len = 0;
 	int i;
