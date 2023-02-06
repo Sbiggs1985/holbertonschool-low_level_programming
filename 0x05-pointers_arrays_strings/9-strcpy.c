@@ -1,24 +1,21 @@
 #include "main.h"
 /**
- * print_array - Prints elements
- * @a: The pointer
- * @n: The array quantity
- * Return: 
+ * *_strcpy - Entry Point
+ * @dest: for character
+ * @src: get number
+ * Return: array with spaces
  */
 
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int fi;
+	int n;
 
-	for (f1 = 0; f1 < n; fi++)
+	for (n = 0; src[n] != '\0'; n++)
 	{
-		if (f1 == 0)
-		{
-			printf("d", a[f1];
-		}
-		else
-		{
-			printf("%d", a[f1];
-		}
-		printf('\n');
+		dest[n] = src[n];
+	}
+	dest[n] = src[n];
+
+		return (dest);
+}
 
