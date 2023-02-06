@@ -5,19 +5,10 @@ i#include "main.h"
  */
 void print_rev(char *s)
 {
-	int len = 0;
-	int i;
+	int revcount = 0;
 
-	while (*s != '\0')
+	while (s[revcount] != '\0')
 	{
-		len++;
-		s++;
+		revcount++;
 	}
-	s--;
-	for (i = len; i > 0; i--)
-	{
-		putchar(*s);
-		s--;
-	}
-	putchar('\n');
-}
+		
