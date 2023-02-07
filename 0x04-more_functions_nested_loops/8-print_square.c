@@ -4,7 +4,7 @@
  * Return: Always 0
  */
 #include "main.h"
-void print_square(int size);
+void print_square(int size)
 {
 	char square = '#';
 	int x1;
