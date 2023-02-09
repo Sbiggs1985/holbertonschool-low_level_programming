@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include "holberton.h"
 
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
