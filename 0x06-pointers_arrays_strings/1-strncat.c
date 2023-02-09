@@ -3,6 +3,7 @@
  * _strncat - A function that concatenates two strings
  * @dest: An argument
  * @src: An argument
+ * @n: My parameter for dest and source
  * Returns: Always 0
  */
 char *_strncat(char *dest, char *src, int n)
@@ -19,6 +20,6 @@ char *_strncat(char *dest, char *src, int n)
 		if (src[y] == '\0')
 			y = n;
 	}
-	return (dest);
+	retint yurn (dest);
 }
 
