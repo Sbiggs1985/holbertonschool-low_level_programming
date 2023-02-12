@@ -6,13 +6,13 @@
  */
 char *string_toupper(char *n)
 {
-	int pear = 0;
+	int index = 0;
 
-	while (str[pear])
-
-	if (str[pear] >= 'a' && str[pear] <= 'z')
-		str[pear] -= 32;
-	pear++;
-}
+	while (str[index])
+	{
+	if (str[index] >= 'a' && str[index] <= 'z')
+	str[index] -= 32;
+	index++;
+	}
 	return (str);
 }
