@@ -1,28 +1,29 @@
 #include "holberton.h"
-#include <string.h>
 /**
 * _strncat - For concatenating
 * @dest: An argument
 * @src: An argument
-* @n: My parameter for dest and source
-*
-* Descripion: I am using _strncat to concatenate
-* Returns: LOL
+* @n: input value
+* Returns: dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, co;
+	int i;
+	int j;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
+		i++;
 	}
-
-	for (co = 0; co < n; co++)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[i + co] = src[co];
-		if (src[co] == '\0')
-			co = n;
+	dest[i] = src[j];
+	i++;
+	j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 
