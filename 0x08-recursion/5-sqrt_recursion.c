@@ -1,30 +1,29 @@
 #include "main.h"
-iint squareroot(int n, int i);
+int _sqrt(int n, int c);
 /**
  * _sqrt_recursion - Check for square root
  * @n: Input
  * Return: Always 0
  */
-int _sqt_recursion(int n)
+int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else
-		return (squareroot(n, (n + 1) / 2));
+	return (_sqrt(n, 1));
 }
 /**
- * squareroot - checks the square root
- * @n: Input
- * @i: Counter
- * Return: if square root
+ * _sqrt - what is this? I don't know anything
+ * @n: input
+ * @c: what
+ * Return: Always 0
  */
-int squareroot(int n, int i)
+int _sqrt(int n, int c)
 {
-	if (i < 1)
-		return (-1);
-	else if (i * 1 == n)
-		return (i);
-	else
-		return (squareroot(n, i - 1));
-}
+	int sqt = c * c;
 
+	if (sqt < 0)
+		return (-1);
+
+	if (sqt == n)
+		return (c);
+
+	return (_sqrt(n, c + 1));
+}
