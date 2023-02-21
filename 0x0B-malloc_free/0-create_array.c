@@ -1,4 +1,5 @@
 #include "main.h"
+#include i<stdlib.h>
 #include <stdio.h>
 /**
  * create_array - Entry point
