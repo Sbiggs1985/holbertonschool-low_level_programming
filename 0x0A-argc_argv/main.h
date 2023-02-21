@@ -1,11 +1,7 @@
-#ifndef "MAIN_H"
-#define "MAIN_H"
+#include MAIN_H
+#include MAIN_H
 
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 
 int _putchar(char c);
-
-#endif
-
+#enif

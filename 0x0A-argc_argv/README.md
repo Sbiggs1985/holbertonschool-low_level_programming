@@ -1,6 +1,6 @@
-0x0B. C - argc, argv
+0xB. C Argc, Argv
 
 Arguments to main
-argc and argv
-What does argc mean and argv mean?
-How to compile with unused variables.
+Argc and argv
+What does argc and argv mean?
+How to compile with unused variables

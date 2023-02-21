@@ -1,14 +1,14 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * main - Entry point
+ * main - function
  * @argc: Argument count
- * @argv: An array of strings
- * Return: Always 0
+ * @argv: array of strings
+ * Return: None
  */
-int main(int argc, char *argv[])
+
+int main(int argc _attribute_((unused)), *argv[])
 {
-	(void) argc;
-	printf("%s\n", argv[0]);
+	printf("%s\n", *argv);
 	return (0);
 }
