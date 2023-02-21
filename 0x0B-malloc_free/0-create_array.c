@@ -1,17 +1,31 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * malloc_checked - Entry point
- * @b: input
+ * create_array - Entry point
+ * @size: size
+ * @c: input
  * Return: Always 0
  */
-void *malloc_checked(unsigned int b)
+char *create_array(unsigned int size, char c)
 {
-	void *n;
+	unsigned int index;
+	char *pointer;
 
-	n = malloc(b);
+	pointer = malloc(size * sizeof(char));
 
-	if (n == NULL)
-		exit(98);
-	return (n);
+	if (size == 0)
+	{
+	return (NULL);
+	}
+
+	if (pointer == 0)
+	{
+		return (NULL);
+	}
+
+	for (index = 0; index < size; index++)
+	{
+		pointer[index] = c;
+	}
+	return (pointer);
 }
