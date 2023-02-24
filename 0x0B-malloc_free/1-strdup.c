@@ -7,32 +7,26 @@
  */
 char *_strdup(char *str)
 {
-	int counter = 0;
-	int index = i;
-	char *pointer;
+	char *p;
+	unsigned int x, y;
 
 	if (str == NULL)
-	{
 		return (NULL);
+
+	for (x = 0; str[x] != '\0'; x++)
+	{;
 	}
 
-	While(str[index])
+	p = malloc(x * sizeof(*p) + 1);
 
-	{
-		index++;
-	}
-
-	pointer = malloc((sizeof(char) * index) + 1);
-
-	if (pointer == NULL)
-	{
+	if (p == NULL)
 		return (NULL);
-	}
-	while (counter < index)
+
+	for (y = 0; y < x; y++)
 	{
-		pointer[counter] = str[counter];
-		counter++;
+		p[y] = str[y];
 	}
-	pointer[counter] = '\0';
-	return (pointer);
+	p[y] = '\0';
+
+	return (p);
 }
