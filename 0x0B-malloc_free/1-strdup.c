@@ -28,7 +28,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	while (couner < index)
+	while (counter < index)
 	{
 		pointer[counter] = str[counter];
 		counter++;
