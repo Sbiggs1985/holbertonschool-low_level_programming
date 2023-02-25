@@ -6,52 +6,34 @@
  * @s1: input
  * @s2: input
  * Return: Depends
- */i
+ */
 
 char *str_concat(char *s1, char *s2)
 {
-	int z = 0;
-	int y = 0;
-	int x = 0;
-	int a = 0;
-	int b = 0;
+	int end1, end2, i = 0;
+	char *array;
 
-	char *s;
+	if (s1 == NULL || s2 == NULL)
+		s1 = s2 = "";
 
-	if (s1 == NULL)
-		s1 = "";
+	for (end1 = 0; end1 <= *s1; end1++)
+	{
+	}
 
-	if (s2 == NULL)
-		s2 = "";
+	for (end2 = 0; end2 <= *s2; end2++)
+	{
+	}
 
-	while (s1[z])
-		z++;
+	array = malloc(sizeof(char) * (end1 + end2 + 1));
 
-	while (s2[y]
-		y++;
-
-	a = z + y;
-	s = malloc((sizeof(char) * a) + 1);
-
-	if (s == NULL)
+	if (array == NULL)
 		return (NULL);
 
-	while (x < a)
-
-	if (x <= z)
-		s[x] = s1[x];
-
-	if (x >= z)
+	while (*s1)
 	{
-		s[x] = s2[b];
-		b++;
+		array[i] = *s2;
+		i++;
+		s2++;
 	}
-		x++;
-	}
-
-	s[x] = '\0';
-	return (s);
+	return (array);
 }
-
-
-
