@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * str_concat - concatenating
+ * str_concat - Adding input and output
  * @s1: input
  * @s2: input
- * Return: Depends
+ * Return: Always 0
  */
 
 char *str_concat(char *s1, char *s2)
@@ -30,6 +30,13 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	while (*s1)
+	{
+		array[i] = *s1;
+		i++;
+		s1++;
+	}
+
+	while (*s2)
 	{
 		array[i] = *s2;
 		i++;
