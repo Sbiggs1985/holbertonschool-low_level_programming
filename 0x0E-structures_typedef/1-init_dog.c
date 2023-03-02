@@ -1,6 +1,6 @@
 #include "dog.h"
 
-/*
+/**
  * init_dog - A function that will initialize the variable.
  * @d: struct name
  * @name: name
