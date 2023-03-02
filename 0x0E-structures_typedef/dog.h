@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * struct dog - dog
+ * struct dog - structure
  * @name: name
  * @age: age
  * @owner: owner
@@ -14,11 +14,16 @@ typedef struct dog
 {
 	char *name;
 	float age;
-i	char *owner;
-} my_dog, dog_t;
+	char *owner;
+} dog;
+
+typedef dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-my_dog *new_dog(char *name, float age, char *owner);
-void free_dog(my_dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+int _putchar(char c);
+
 #endif
