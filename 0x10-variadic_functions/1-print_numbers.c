@@ -7,6 +7,7 @@
  * @separator: The string
  * @n: The number
  * @...: The ellipsis
+ * Return: Always 0.
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
