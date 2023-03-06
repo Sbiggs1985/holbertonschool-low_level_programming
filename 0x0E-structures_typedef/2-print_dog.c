@@ -4,7 +4,6 @@
 /**
  * print_dog - printing dog depending on the input
  * @d: Print a structure dog
- * Return: Always 0.
  */
 
 void print_dog(struct dog *d)
