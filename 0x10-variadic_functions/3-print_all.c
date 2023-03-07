@@ -9,43 +9,42 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	char *str, *sep = "";
+	va_list valist;
+	int n = 0, i = 0;
+	char *sep = ", ";
+	char *str;
 
-	va_list list;
+	va_start(valist, format);
 
-	va_start(list, format);
-
-	if (format)
-	{
-		while (format[i])
-		{
-			switch (format[i])
-			{
-		case 'c':
-			printf("%s%sc", sep va_arg(list, int));
-			break;
-		case 'i':
-			printf("%s%sd", sep, va_arg(list, int));
-			break;
-		case 'f':
-			printf("%s%sf", sep va_arg(list, double));
-			break;
-		case 's':
-			str = va_arg(list, char *);
-			if (!str)
-				str = "(nil)";
-			printf("%s%s", sep, str);
-			break;
-		default
-			i++;
-			continue;
-		}
-		sep = ", ";
+	while (format && format[n])
 		i++;
+
+	while (format && format[n])
+	{
+		if (n == (i - 1))
+		{
+			sep = "";
 		}
+	switch (format[n])
+	{
+	case 'c':
+		printf("%c%s", va_arg(valist, int), sep);
+		break;
+	case 'i':
+		printf("%d%s", va_arg(valist, int), sep);
+		break;
+	case 'f':
+		printf("%f%s", va_arg(valist, double), sep);
+		break;
+	case 's':
+		str = va_arg(valist, char *);
+		if (str == NULL)
+			str = "(nil)";
+		printf("%s%s", str, sep);
+		break;
+		}
+		n++;
 	}
 	printf("\n");
-	va_end(list);
+	va_end(valist);
 }
-
