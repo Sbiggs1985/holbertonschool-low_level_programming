@@ -1,7 +1,6 @@
 #include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
-
+#include <stddef.h>
 /**
  * print_listint - a function that prints elements
  * @h: struct
@@ -16,7 +15,7 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		printf("%d\n", h->n);
+		printf("%d\n", h->next);
 		h = h->next;
 		count++;
 	}
