@@ -3,7 +3,7 @@
 #include "lists.h"
 /**
  * add_node_end - a function that adds a new node
- * @head: The first node that points to the address of the second node.
+ * @head: The first node
  * @str: string
  * Return: 0
  */
@@ -19,6 +19,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 
 	for (i = 0; str[i] != '\0'; i++)
+		n++;
 
 	new->len = i;
 	new->str = strdup(str);
