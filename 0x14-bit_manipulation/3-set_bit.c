@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * set_bit - Write a function that sets the value. 
+ * set_bit - Write a function that sets the value.
  * @n: *n is a pointer
  * @index: Index is the Index.
- * Return: -1 or maybe 0. 
+ * Return: -1 or maybe 0.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
