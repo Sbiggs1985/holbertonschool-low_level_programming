@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 /**
  * binary_to_uint - Entry Point
  * @b: Input
