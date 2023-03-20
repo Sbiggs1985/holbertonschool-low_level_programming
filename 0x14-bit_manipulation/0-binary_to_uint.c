@@ -1,9 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
 /**
- * binary_to_uint - Implementation of binary
+ * binary_to_uint - Entry Point
  * @b: Input
  * Return: Number
  */
