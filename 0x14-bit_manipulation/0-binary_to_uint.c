@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (i >= 0)
 	{
-		res += ((b[i] = '0') * base);
+		res += ((b[i] - '0') * base);
 		base *= 2;
 		i--;
 	}
