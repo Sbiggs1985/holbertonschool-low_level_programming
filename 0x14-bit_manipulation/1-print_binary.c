@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 /**
  * print_binary - Entry Point
  * @n: Input
@@ -6,28 +6,28 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = 0, count, x, temp;
+	unsigned long iny mask = 1ul << (sizeof(unsigned long int) * 8 - 1);
+	int started = 0;
 
-	if (n == 0)
+	while (mask > 0)
 	{
-		printf("0");
-		return;
+
+		if (n & mask)
+		{
+			started = 1;
+			_putchar('1');
+		}
+		else if
+			(started)
+		{
+			_putchar('0');
+		}
+
+		mask >>= 1;
 	}
 
-	temp = n;
-
-	while (temp != 0)
+	if (!started)
 	{
-		i++;
-		temp = temp >> 1;
-	}
-
-	for (count = i - 1; count >= 0; count--)
-	{
-		x = n >> count;
-		if (x & 1)
-			printf("1");
-		else
-			printf("0");
+		_putchar('0');
 	}
 }
