@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <stddef.h>
 /**
  * set_bit - Write a function that sets the value.
  * @n: *n is a pointer
