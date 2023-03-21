@@ -1,4 +1,9 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <string.h>
+#include <unistd.h>
 /**
  * create_file - Entry point
  * @filename: filename
@@ -9,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd;
 
-	fd = open(filename, 0_CREAT | 0_WRONLY | 0_TRUNC, 0600);
+	fd = open(filename, Oi_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (fd == -1)
 		return (-1);
