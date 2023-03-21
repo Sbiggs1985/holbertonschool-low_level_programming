@@ -1,13 +1,22 @@
 #include "lists.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 /**
  * free_listint2 - Entry Point
  * @head: Head
- * Return: Depends
+ * Return: 0.
  */
 void free_listint2(listint_t **head)
 {
-	if (!(head))
+	if (*head == NULL)
 		return;
-	free_listint(*head);
+
+	while (*head)
+	{
+		free(*head);
+		*head = (*head)->next;
+	}
+
 	*head = NULL;
 }
