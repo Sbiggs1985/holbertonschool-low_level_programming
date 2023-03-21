@@ -1,13 +1,24 @@
 #include "main.h"
 /**
- * print_binary - Entry Point
+ * print_recursion - Prints binary
  * @n: Input
- * Return: 0.
+ */
+void print_recursion(unsigned long int n)
+{
+	if (n == 0)
+		return;
+	print_recursion(n >> 1);
+	_putchar((n & 1) + '0');
+}
+
+/**
+ * print_binary - print binary
+ * @n: number to print
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
-		print_binary(n >> 1);
-
-		_putchar((n & 1) + '0');
+	if (n == 0)
+		_putchar('0');
+	else
+		print_recursion(n);
 }
