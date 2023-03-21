@@ -6,28 +6,8 @@ i#include "main.h"
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long iny mask = 1ul << (sizeof(unsigned long int) * 8 - 1);
-	int started = 0;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	while (mask > 0)
-	{
-
-		if (n & mask)
-		{
-			started = 1;
-			_putchar('1');
-		}
-		else if
-			(started)
-		{
-			_putchar('0');
-		}
-
-		mask >>= 1;
-	}
-
-	if (!started)
-	{
-		_putchar('0');
-	}
+		_putchar((n & 1) + '0');
 }
