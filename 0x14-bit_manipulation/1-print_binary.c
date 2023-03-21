@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
  * print_binary - Entry Point
  * @n: Input
@@ -10,4 +10,4 @@ void print_binary(unsigned long int n)
 		print_binary(n >> 1);
 
 		_putchar((n & 1) + '0');
-}
+i}
