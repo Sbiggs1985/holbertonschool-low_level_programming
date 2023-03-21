@@ -1,20 +1,21 @@
 #include "lists.h"
-#include "4-free_listint.c"
 /**
- * free_listint2 - Entry Point
- * @head: Head
- * Return: NULL
+ * free_listint2 - Frees a linked list of integers
+ * @head: Pointer to the head of the list
+ * Return: void
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *current = *head;
-	listint_t *next;
+	listint_t *current;
 
-	while (current != NULL)
+	if (head == NULL)
+		return;
+
+	while (*head != NULL)
 	{
-		next = current->next;
+		current = *head;
+		*head = (*head)->next;
 		free(current);
-		current = next;
 	}
 
 	*head = NULL;
