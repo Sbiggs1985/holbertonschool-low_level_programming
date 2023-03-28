@@ -1,11 +1,9 @@
-#ifndef HASH_TABLES_H
-#define HASH_TABLES_H
+#ifndef _hash_tables_
+#define _hash_tables_
 
 #include <stdio.h>
 #include <String.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <stdarg.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -16,21 +14,21 @@
  */
 typedef struct hash_node_s
 {
-		char *key;
-		char *value;
-		struct hash_node_s *next;
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
- * struct hash_table_s - Hash table data structure
- * @size: The size of the array
- * @array: An array of size @size
+ * struct hash_table_s - Hash function
+ * @size: Size
+ * @array: An array of size
  * Each cell of this array is a pointer to the first node of a linked list.
  */
 typedef struct hash_table_s
 {
-		unsigned long int size;
-		hash_node_t **array;
+	unsigned long int size;
+	hash_node_t **array;
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
