@@ -1,4 +1,16 @@
 #include "hash_tables.h"
+
+/**
+ * free_node - Free a node
+ * @node: A node
+ * Return: void
+ */
+void free_node(hash_node_t *node)
+{
+	free(node->key);
+	free(node->value);
+	free(node);
+}
 /**
  * hash_table_set - Set a value
  * @ht: Pointer to hash table
@@ -8,56 +20,47 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *element = NULL;
-	unsigned long int index = 0;
+	unsigned long int index;
+	hash_node_t *new_node, *current;
 
-	if (!ht || !key || !(*key) || !value)
+	if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
+	new_node = malloc(sizeof(hash_node_t));
 
-	if (ht->array[index] && !(match_element(key, ht->array[index], value)))
-		return (1);
-
-	element = malloc(sizeof(hash_node_t));
-
-	if (!element)
+	if (new_node == NULL)
 		return (0);
-	element->key = strdup(key);
-	element->value = strdup(value);
+	new_node->key = strdup((char *)key);
+	new_node->value = strdup((char *)value);
+	new_node->next = NULL;
 
-	if (!(element->key) || !(element->value))
+	if (ht->array[index] == NULL)
+		ht->array[index] = new_node;
+	else
 	{
-		if (element->key)
-			free(element->key);
-		free(element);
-		return (0);
+		current = ht->array[index];
+		if (strcmp(current->key, key) == 0)
+	{
+		new_node->next = current->next;
+		ht->array[index] = new_node;
+		free_node(current);
+			return (1);
 	}
-	element->next = ht->array[index];
-	ht->array[index] = element;
 
-	return (1);
-}
-/**
- * match_element - Check if a key value is already in a bucket
- * @key: Key
- * @array: bucket
- * @value: Value
- * Return: 1
- */
-int match_element(const char *key, hash_node_t *array, const char *value)
-{
-	hash_node_t *match = array;
-
-	while (match)
-	{
-		if (!(strcmp(match->key, key)))
+	while (current->next != NULL && strcmp(current->next->key, key) != 0)
+	{ current = current->next;
+	}
+		if (strcmp(current->key, key) == 0)
 		{
-			free(match->value);
-			match->value = strdup(value);
-			return (0);
+			new_node->next = current->next->next;
+			free_node(current->next);
+			current->next = new_node;
 		}
-		match = match->next;
+		else
+		{
+			new_node->next = ht->array[index];
+			ht->array[index] = new_node;
+		}
 	}
 	return (1);
 }
